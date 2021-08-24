@@ -8,63 +8,127 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Frontend Mentor | Order summary card</title>
 
   <style>
-    .container {
+    body {
+      background-color: hsl(225, 100%, 94%);
+    }
+
+    main {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 20px;
+      justify-content: space-between;
+      align-items: center;      
 
       width: 450px;
       margin-left: auto;  
       margin-right: auto;
       
-      border: 1px solid black;
       border-radius: 25px;
       
       font-family: 'Red Hat Display';
       text-align: center;
+      font-size: 16px;
+
+      background-color: white;
     }
 
-    img {
+    header > img {
       border-top-left-radius: 25px;
       border-top-right-radius: 25px;
     }
 
-    .main {
+    section {
       display: flex;
       flex-direction: column;
+      margin: 0 75px;
+    }
+
+    .summary > h1 {
+      font-weight: 900;
+      font-size: 30px;
+      color: hsl(223, 47%, 23%);
+    }
+
+    .summary > p {
+      color: hsl(224, 23%, 55%);
+    }
+
+    .plan {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      border-radius: 20px;
+      padding: 0 20px;
+
+      background-color: hsl(225, 100%, 98%);
+    }
+
+    .plan > img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .plan > p > span:first-child {
+      font-weight: 900;
+      color: hsl(223, 47%, 23%);
+    }
+
+    .plan > p > span {
+      color: hsl(224, 23%, 55%);
+    }
+
+    .plan > a {
+      color: hsl(245, 75%, 52%);
+      font-weight: 900;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+
+      margin-top: 25px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <main>
     <header>
       <img src="images/illustration-hero.svg" />
     </header>
     
-    <main class="main">
-      <h1 class="h1">
-        Order Summary
-      </h1>
+    <section>
+      <article class="summary">
+        <h1>
+          Order Summary
+        </h1>
+    
+        <p>
+          You can now listen to millions of songs, audiobooks, and podcasts on any 
+          device anywhere you like!
+        </p>
+      </article>      
   
-      <p>
-        You can now listen to millions of songs, audiobooks, and podcasts on any 
-        device anywhere you like!
-      </p>
+      <article class="plan">
+        <img src="images/icon-music.svg">
+        <p>
+          <span>Annual Plan</span>
+          <br/>
+          <span>$59.99/year</span>
+        </p>
+
+        <a href="#">Change</a>
+      </article>
+
+      <nav>
+        <button class="bt-proceed">Proceed to Payment</button>
   
-      <section>
-        Annual Plan
-        $59.99/year
-        Change
-      </section>
-  
-      <button>Proceed to Payment</button>
-  
-      <button>Cancel Order</button>
-    </main>
-  </div>    
+        <button>Cancel Order</button>
+      </nav>      
+    </section>
+  </main>    
 </body>
 </html>
